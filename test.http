@@ -1,0 +1,16 @@
+### Crea una nuova partita
+POST http://localhost:3000/users/start-game
+Content-Type: application/json
+
+{
+  "player1": {
+    "token": "Automobilina",
+    "clothesLevel": 5,
+    "secretPenalty": "Dovrà fare i piatti per una settimana."
+  },
+  "player2": {
+    "token": "Cilindro",
+    "clothesLevel": 4,
+    "secretPenalty": "Dovrà preparare la colazione a letto."
+  }
+}

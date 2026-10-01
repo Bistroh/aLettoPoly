@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adultopoly</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<!-- Sezione 1: Setup Partita -->
+<div id="setup-section" class="container">
+    <h1>Setup Partita</h1>
+    <form id="setup-form">
+        <div class="player-setup">
+            <h3>Giocatore 1</h3>
+            <input type="text" id="p1-token" placeholder="Nome (es. Marco)" required>
+            <input type="number" id="p1-clothes" placeholder="Numero indumenti" min="1" required>
+            <input type="password" id="p1-penalty" placeholder="Penitenza segreta per G2" required>
+        </div>
+        <div class="player-setup">
+            <h3>Giocatore 2</h3>
+            <input type="text" id="p2-token" placeholder="Nome (es. Laura)" required>
+            <input type="number" id="p2-clothes" placeholder="Numero indumenti" min="1" required>
+            <input type="password" id="p2-penalty" placeholder="Penitenza segreta per G1" required>
+        </div>
+        <button type="submit" class="btn-start">Inizia Partita</button>
+    </form>
+</div>
+
+<!-- Sezione 2: Tabellone di Gioco (Inizialmente nascosto) -->
+<div id="game-section" style="display: none;">
+    <div id="game-board" class="board">
+        <div class="center-area">
+            <h1 class="game-logo">aLettoPoly</h1>
+
+            <div class="dashboards-container">
+                <!-- Dashboard Giocatore 1 -->
+                <div id="dash-p1" class="player-dash p1-dash">
+                    <h2 id="name-p1">Giocatore 1</h2>
+                    <div class="stat">💰 Saldo: <strong id="bal-p1">1500€</strong></div>
+                    <div class="stat">👕 Vestiti: <strong id="cloth-p1">0</strong></div>
+                    <div id="jail-p1" class="jail-status" style="display:none;">🔒 In Prigione</div>
+                </div>
+
+                <!-- Area Pulsante Centrale -->
+                <div class="action-center">
+                    <button id="btn-roll" class="btn-action">Tira i Dadi</button>
+                </div>
+
+                <!-- Dashboard Giocatore 2 -->
+                <div id="dash-p2" class="player-dash p2-dash">
+                    <h2 id="name-p2">Giocatore 2</h2>
+                    <div class="stat">💰 Saldo: <strong id="bal-p2">1500€</strong></div>
+                    <div class="stat">👕 Vestiti: <strong id="cloth-p2">0</strong></div>
+                    <div id="jail-p2" class="jail-status" style="display:none;">🔒 In Prigione</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/main.js"></script>
+</body>
+</html>
