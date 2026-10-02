@@ -5,7 +5,7 @@ const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'adultopoly',
+    database: 'alettopoly',
     waitForConnections: true,
     connectionLimit: 10,    // Numero massimo di connessioni simultanee
     queueLimit: 0
